@@ -1,0 +1,15 @@
+{"time":"2026-01-06T19:11:26.328996508+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-06T19:11:27.084417701+08:00","level":"INFO","msg":"stream: created new stream","id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.084524718+08:00","level":"INFO","msg":"handler: started","stream_id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.084548059+08:00","level":"INFO","msg":"stream: started","id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.084563765+08:00","level":"INFO","msg":"writer: started","stream_id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.084564227+08:00","level":"INFO","msg":"sender: started","stream_id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.363594505+08:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-01-06T19:11:27.363650519+08:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 403: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"permission denied\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}]}"}
+{"time":"2026-01-06T19:11:27.369317019+08:00","level":"INFO","msg":"stream: closing","id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.369529981+08:00","level":"ERROR","msg":"sender: uploadConfigFile: runupserter: run not yet initialized"}
+{"time":"2026-01-06T19:11:27.420106444+08:00","level":"ERROR","msg":"runfiles: runupserter: run not yet initialized"}
+{"time":"2026-01-06T19:11:27.42037452+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-06T19:11:27.42039085+08:00","level":"INFO","msg":"handler: closed","stream_id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.420418601+08:00","level":"INFO","msg":"sender: closed","stream_id":"jmurdr9h"}
+{"time":"2026-01-06T19:11:27.420425026+08:00","level":"INFO","msg":"stream: closed","id":"jmurdr9h"}

@@ -1,0 +1,15 @@
+{"time":"2026-01-06T19:04:12.618893213+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-06T19:04:14.06037167+08:00","level":"INFO","msg":"stream: created new stream","id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.060501476+08:00","level":"INFO","msg":"stream: started","id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.060529769+08:00","level":"INFO","msg":"writer: started","stream_id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.060542031+08:00","level":"INFO","msg":"sender: started","stream_id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.061563829+08:00","level":"INFO","msg":"handler: started","stream_id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.354948449+08:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-01-06T19:04:14.355014182+08:00","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 404: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"entity openvla-repro-user not found during upsertBucket\",\"path\":[\"upsertBucket\"]}]}"}
+{"time":"2026-01-06T19:04:14.362176275+08:00","level":"INFO","msg":"stream: closing","id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.362385446+08:00","level":"ERROR","msg":"sender: uploadConfigFile: runupserter: run not yet initialized"}
+{"time":"2026-01-06T19:04:14.412860959+08:00","level":"ERROR","msg":"runfiles: runupserter: run not yet initialized"}
+{"time":"2026-01-06T19:04:14.414043237+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-06T19:04:14.41406122+08:00","level":"INFO","msg":"handler: closed","stream_id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.414088441+08:00","level":"INFO","msg":"sender: closed","stream_id":"8m96k4fe"}
+{"time":"2026-01-06T19:04:14.414094744+08:00","level":"INFO","msg":"stream: closed","id":"8m96k4fe"}

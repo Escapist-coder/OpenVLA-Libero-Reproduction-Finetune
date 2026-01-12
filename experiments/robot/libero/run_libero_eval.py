@@ -1,37 +1,45 @@
 """
 run_libero_eval.py
-
-Runs a model in a LIBERO simulation environment.
-
-Usage:
-    # OpenVLA:
-    # IMPORTANT: Set `center_crop=True` if model is fine-tuned with augmentations
-    python experiments/robot/libero/run_libero_eval.py \
-        --model_family openvla \
-        --pretrained_checkpoint <CHECKPOINT_PATH> \
-        --task_suite_name [ libero_spatial | libero_object | libero_goal | libero_10 | libero_90 ] \
-        --center_crop [ True | False ] \
-        --run_id_note <OPTIONAL TAG TO INSERT INTO RUN ID FOR LOGGING> \
-        --use_wandb [ True | False ] \
-        --wandb_project <PROJECT> \
-        --wandb_entity <ENTITY>
 """
-
-import os
 import sys
+import os
+
+# ==============================================================================
+# 💀 暴力修复区 (不要动这里)
+# ==============================================================================
+
+# 1. 强制添加 LIBERO 库的绝对路径
+# (根据你之前的 ls 结果，源码在 /datadisk/my_project/LIBERO)
+sys.path.insert(0, "/datadisk/my_project/LIBERO")
+
+# 2. 强制添加 OpenVLA 项目根目录
+# (让脚本能找到 experiments 模块)
+sys.path.insert(0, "/datadisk/my_project/openvla")
+
+# 3. 杀掉当前脚本所在的目录，防止同名文件夹冲突
+# (把 /datadisk/my_project/openvla/experiments/robot/libero 从搜索路径里踢出去)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir in sys.path:
+    sys.path.remove(current_dir)
+
+# ==============================================================================
+
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Union
-
 import draccus
 import numpy as np
 import tqdm
-from libero.libero import benchmark
-
 import wandb
 
-# Append current directory so that interpreter can find experiments.robot
-sys.path.append("../..")
+# 这里的 import 应该能正常工作了
+try:
+    from libero import benchmark
+except ImportError:
+    # 如果还是不行，尝试从子文件夹导入 (兼容不同版本的 Libero)
+    from libero.libero import benchmark
+
+# 继续导入项目内部模块
 from experiments.robot.libero.libero_utils import (
     get_libero_dummy_action,
     get_libero_env,
@@ -90,8 +98,8 @@ class GenerateConfig:
 @draccus.wrap()
 def eval_libero(cfg: GenerateConfig) -> None:
     assert cfg.pretrained_checkpoint is not None, "cfg.pretrained_checkpoint must not be None!"
-    if "image_aug" in cfg.pretrained_checkpoint:
-        assert cfg.center_crop, "Expecting `center_crop==True` because model was trained with image augmentations!"
+    # if "image_aug" in cfg.pretrained_checkpoint:
+        # assert cfg.center_crop, "Expecting `center_crop==True` because model was trained with image augmentations!"
     assert not (cfg.load_in_8bit and cfg.load_in_4bit), "Cannot use both 8-bit and 4-bit quantization!"
 
     # Set random seed

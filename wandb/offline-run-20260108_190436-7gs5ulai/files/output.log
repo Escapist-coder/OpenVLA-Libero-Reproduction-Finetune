@@ -1,0 +1,12 @@
+ 20%|██████████████████████████▋                                                                                                          | 1001/5000 [16:49<1:04:57,  1.03it/s]/datadisk/miniconda3/envs/vla/lib/python3.10/site-packages/peft/utils/save_and_load.py:180: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+ 21%|████████████████████████████▏                                                                                                        | 1060/5000 [17:49<1:05:34,  1.00it/s]
+Saving Model Checkpoint for Step 1000
+
+ 51%|████████████████████████████████████████████████████████████████████▌                                                                  | 2540/5000 [42:32<41:04,  1.00s/it]
+
+ 79%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▌                           | 3970/5000 [1:06:31<17:10,  1.00s/it]
+
+Saving Model Checkpoint for Step 4000
+Saving Model Checkpoint for Step 5000
+Max step 5000 reached! Stopping training...

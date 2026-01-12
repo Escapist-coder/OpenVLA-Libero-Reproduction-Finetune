@@ -323,7 +323,7 @@ def finetune(cfg: FinetuneConfig) -> None:
                     print(f"Saving Model Checkpoint for Step {gradient_step_idx}")
 
                     # If LoRA, we first save adapter weights, then merge into full model; otherwise, default save!
-                    save_dir = adapter_dir if cfg.use_lora else run_dir
+                    save_dir = run_dir # used to be: save_dir = adapter_dir if cfg.use_lora else run_dir
 
                     # Save Processor & Weights
                     processor.save_pretrained(run_dir)
@@ -332,33 +332,30 @@ def finetune(cfg: FinetuneConfig) -> None:
                 # Wait for processor and adapter weights to be saved by main process
                 dist.barrier()
 
+                # ================= ✂️ 从这里开始注释/删除 ✂️ =================
                 # Merge LoRA weights into model backbone for faster inference
-                #   =>> Note that merging is slow and can be done post-hoc to speed up training
-                if cfg.use_lora:
-                    base_vla = AutoModelForVision2Seq.from_pretrained(
-                        cfg.vla_path, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True, trust_remote_code=True
-                    )
-                    merged_vla = PeftModel.from_pretrained(base_vla, adapter_dir)
-                    merged_vla = merged_vla.merge_and_unload()
-                    if distributed_state.is_main_process:
-                        if cfg.save_latest_checkpoint_only:
-                            # Overwrite latest checkpoint
-                            merged_vla.save_pretrained(run_dir)
-
-                            print(f"Saved Model Checkpoint for Step {gradient_step_idx} at: {run_dir}")
-                        else:
-                            # Prepare to save checkpoint in new directory
-                            checkpoint_dir = Path(str(run_dir) + f"--{gradient_step_idx}_chkpt")
-                            os.makedirs(checkpoint_dir, exist_ok=True)
-
-                            # Save dataset statistics to new directory
-                            save_dataset_statistics(vla_dataset.dataset_statistics, checkpoint_dir)
-
-                            # Save processor and model weights to new directory
-                            processor.save_pretrained(checkpoint_dir)
-                            merged_vla.save_pretrained(checkpoint_dir)
-
-                            print(f"Saved Model Checkpoint for Step {gradient_step_idx} at: {checkpoint_dir}")
+                # if cfg.use_lora:
+                #     base_vla = AutoModelForVision2Seq.from_pretrained(
+                #         cfg.vla_path, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True, trust_remote_code=True
+                #     )
+                #     merged_vla = PeftModel.from_pretrained(base_vla, adapter_dir)
+                #     merged_vla = merged_vla.merge_and_unload()
+                #     if distributed_state.is_main_process:
+                #         if cfg.save_latest_checkpoint_only:
+                #             # Overwrite latest checkpoint
+                #             merged_vla.save_pretrained(run_dir)
+                #             print(f"Saved Model Checkpoint for Step {gradient_step_idx} at: {run_dir}")
+                #         else:
+                #             # Prepare to save checkpoint in new directory
+                #             checkpoint_dir = Path(str(run_dir) + f"--{gradient_step_idx}_chkpt")
+                #             os.makedirs(checkpoint_dir, exist_ok=True)
+                #             # Save dataset statistics to new directory
+                #             save_dataset_statistics(vla_dataset.dataset_statistics, checkpoint_dir)
+                #             # Save processor and model weights to new directory
+                #             processor.save_pretrained(checkpoint_dir)
+                #             merged_vla.save_pretrained(checkpoint_dir)
+                #             print(f"Saved Model Checkpoint for Step {gradient_step_idx} at: {checkpoint_dir}")
+                # ================= ✂️ 到这里结束 ✂️ =================
 
                 # Block on Main Process Checkpointing
                 dist.barrier()
