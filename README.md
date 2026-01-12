@@ -5,7 +5,7 @@
 <img width="1825" height="635" alt="ScreenShot_2026-01-12_112904_665" src="https://github.com/user-attachments/assets/92ffc0cc-1724-469b-8261-9cffa31492af" />
 
 ## 📖 Project Overview
-This project documents the deployment and evaluation of the OpenVLA (7B) model on the Libero-Spatial robot manipulation benchmark. The goal was to validate the model's visual-motor control capabilities in a simulated MuJoCo environment.
+This project documents the deployment and evaluation of the OpenVLA (7B) model on the Libero-Spatial robot manipulation benchmark. The goal was to validate the model's visual-motor control capabilities in a simulated MuJoCo environment. I have recorded all the related processes in CSDN, [OpenVLA-Learning](https://blog.csdn.net/2303_77547168/article/details/156364335?spm=1011.2415.3001.5331).
 
 ## 🛠️ Environment Setup
 Successfully running the evaluation required solving several dependency conflicts between legacy `gym` and modern `gymnasium` environments.
