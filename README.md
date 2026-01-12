@@ -43,3 +43,6 @@ Upon manual inspection of the replay videos, the robot successfully completed th
 
 ## 🎥 Demos
 (这里放一两个你下载下来的 .mp4 动图或视频链接，展示成功的抓取)
+
+## Acknowledgements 
+This project is based on the OpenVLA codebase. Special thanks to the original authors for their open-source contribution.
