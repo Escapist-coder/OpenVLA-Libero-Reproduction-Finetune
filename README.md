@@ -39,7 +39,7 @@ During the reproduction, I encountered and resolved the following critical issue
 
 | Task Suite | Episodes | Auto-Eval Success Rate | Human-Eval Success Rate |
 | :--- | :--- | :--- | :--- |
-| Libero Spatial | 50+ | ~14% | ~30% (Estimated) |
+| Libero Spatial | 58 | ~14% | ~31%  |
 
 **Analysis of "False Negatives":**
 Upon manual inspection of the replay videos, the robot successfully completed the task (e.g., picking up the red mug) in many episodes marked as "Fail". 
