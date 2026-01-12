@@ -1,9 +1,11 @@
-# OpenVLA Evaluation on Libero Benchmark: A Reproduction Journey
+# OpenVLA Finetune and Evaluation on Libero Benchmark: A Reproduction Journey
+
+## 🎥 Demos
 
 ## 📖 Project Overview
 This project documents the deployment and evaluation of the OpenVLA (7B) model on the Libero-Spatial robot manipulation benchmark. The goal was to validate the model's visual-motor control capabilities in a simulated MuJoCo environment.
 
-## 🛠️ Environment Setup (The Tricky Part)
+## 🛠️ Environment Setup
 Successfully running the evaluation required solving several dependency conflicts between legacy `gym` and modern `gymnasium` environments.
 
 **Key Dependencies:**
@@ -40,9 +42,6 @@ During the reproduction, I encountered and resolved the following critical issue
 **Analysis of "False Negatives":**
 Upon manual inspection of the replay videos, the robot successfully completed the task (e.g., picking up the red mug) in many episodes marked as "Fail". 
 - **Reason:** The strict geometric threshold of the simulation environment (height/zone tolerance) often rejects valid manipulations that would be considered successful in the real world.
-
-## 🎥 Demos
-(这里放一两个你下载下来的 .mp4 动图或视频链接，展示成功的抓取)
 
 ## Acknowledgements 
 This project is based on the OpenVLA codebase. Special thanks to the original authors for their open-source contribution.
