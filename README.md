@@ -1,6 +1,17 @@
 # OpenVLA Finetune and Evaluation on Libero Benchmark: A Reproduction Journey
 
 ## 🎥 Demos (not finished yet)
+| 视频演示 | 视频说明 | Success |
+| :------- | :------- | :------- |
+| ![夹空]([https://xxx.com/cover1.jpg](https://github.com/user-attachments/assets/7028a78b-cd00-49b0-8325-a5ca249e531d)) | 抓取一次成功 | True |
+| ![封面图](https://xxx.com/cover2.jpg) | ROS路径规划算法验证 | [点击播放](https://www.youtube.com/watch?v=xxxxxx) |
+
+
+
+https://github.com/user-attachments/assets/7028a78b-cd00-49b0-8325-a5ca249e531d
+
+
+
 <img width="500" height="300" alt="W B Chart 2026_1_12 09_37_51" src="https://github.com/user-attachments/assets/795ed370-92df-42f4-91f2-c993c61cd866" /><img width="500" height="300" alt="W B Chart 2026_1_12 09_38_06" src="https://github.com/user-attachments/assets/877059e6-1a44-495b-b1f1-8784161d7f28" /><img width="500" height="300" alt="W B Chart 2026_1_12 09_38_15" src="https://github.com/user-attachments/assets/ff87d5cc-44e0-4167-b355-75c1f7824a07" />
 <img width="1825" height="635" alt="ScreenShot_2026-01-12_112904_665" src="https://github.com/user-attachments/assets/92ffc0cc-1724-469b-8261-9cffa31492af" />
 
