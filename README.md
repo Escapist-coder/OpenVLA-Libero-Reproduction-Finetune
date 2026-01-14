@@ -3,7 +3,7 @@
 ## 🎥 Demos (not finished yet)
 | 视频演示 | 视频说明 | Success |
 | :------- | :------- | :------- |
-| https://github.com/user-attachments/assets/7028a78b-cd00-49b0-8325-a5ca249e531d) | 抓取一次成功 | True |
+| https://github.com/user-attachments/assets/7028a78b-cd00-49b0-8325-a5ca249e531d | 抓取一次成功 | True |
 | ![封面图](https://xxx.com/cover2.jpg) | ROS路径规划算法验证 | [点击播放](https://www.youtube.com/watch?v=xxxxxx) |
 
 
