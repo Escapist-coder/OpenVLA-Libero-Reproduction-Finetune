@@ -3,9 +3,10 @@
 ## 🎥 Demos (not finished yet)
 
 - Task 1
+
 | 视频演示 | 视频说明 | Success |
 | :------- | :------- | :------- |
-| ![完美](https://github.com/user-attachments/assets/6ba2b912-38ad-4956-ae12-b97c9d6f8a0e)| 抓取一次成功 | True |
+|![完美](https://github.com/user-attachments/assets/6ba2b912-38ad-4956-ae12-b97c9d6f8a0e)| 抓取一次成功 | True |
 | ![夹两次成功](https://github.com/user-attachments/assets/c4d155a3-4cd2-4a1c-a5c9-7ddbc6ab50c7)| 抓取两次成功 | True |
 | ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓空 | False |
 | ![碰到没夹起来](https://github.com/user-attachments/assets/4c6e5f0e-992d-40cb-9b29-2ffdf8aaa502)| 碰到但未抓取成功 | False |
