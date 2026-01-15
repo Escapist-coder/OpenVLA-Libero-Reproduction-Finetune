@@ -3,9 +3,16 @@
 ## 🎥 Demos (not finished yet)
 | 视频演示 | 视频说明 | Success |
 | :------- | :------- | :------- |
-| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓取一次成功 | True |
-| ![封面图](https://xxx.com/cover2.jpg) | ROS路径规划算法验证 | [点击播放](https://www.youtube.com/watch?v=xxxxxx) |
-![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)
+| (https://github.com/user-attachments/assets/5fdde9e5-1767-4019-87e5-0542b793fd1b)| 抓取一次成功 | True |
+| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓取两次成功 | True |
+| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓空 | False |
+| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 碰到但未抓取成功 | False |
+| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓进盘中但翻出来 | False |
+| ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 部分抓进盘中 | False |
+
+
+
+https://github.com/user-attachments/assets/5fdde9e5-1767-4019-87e5-0542b793fd1b
 
 
 
