@@ -62,7 +62,7 @@ The whole process was recorded on [OpenVLA-Learning](https://blog.csdn.net/2303_
 | Libero Spatial Task2 | 8 | ~13% | ~63%  |
 
 **Analysis of "False Negatives":**
-Upon manual inspection of the replay videos, the robot successfully completed the task (e.g., picking up the red mug) in many episodes marked as "Fail". 
+Upon manual inspection of the replay videos, the robot successfully completed the task in many episodes marked as "Fail". 
 - **Reason:** The strict geometric threshold of the simulation environment (height/zone tolerance) often rejects valid manipulations that would be considered successful in the real world. At the same time, the number of training rounds is still insufficient.
 
 ## Acknowledgements 
