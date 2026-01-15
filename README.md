@@ -1,17 +1,24 @@
 # OpenVLA Finetune and Evaluation on Libero Benchmark: A Reproduction Journey
 
-## 🎥 Demos (not finished yet)
-
+## 🎥 Demos 
 - Task 1
 
 | 视频演示 | 视频说明 | Success |
 | :------- | :------- | :------- |
-|![完美](https://github.com/user-attachments/assets/6ba2b912-38ad-4956-ae12-b97c9d6f8a0e)| 抓取一次成功 | True |
+| ![完美](https://github.com/user-attachments/assets/6ba2b912-38ad-4956-ae12-b97c9d6f8a0e)| 抓取一次成功 | True |
 | ![夹两次成功](https://github.com/user-attachments/assets/c4d155a3-4cd2-4a1c-a5c9-7ddbc6ab50c7)| 抓取两次成功 | True |
 | ![夹空](https://github.com/user-attachments/assets/b02a18f5-7a59-4848-a552-ae8c726c2d10)| 抓空 | False |
 | ![碰到没夹起来](https://github.com/user-attachments/assets/4c6e5f0e-992d-40cb-9b29-2ffdf8aaa502)| 碰到但未抓取成功 | False |
-| ![进去但是翻了](https://github.com/user-attachments/assets/7c7d2f62-708b-4037-8f52-8d4fe1f37d08)| 抓进盘中但翻出来 | False |
-| ![进去一部分](https://github.com/user-attachments/assets/ee3ce256-d9af-4eb1-ac0d-a492342e25a6)| 部分抓进盘中 | False |
+| ![进去但是翻了](https://github.com/user-attachments/assets/7c7d2f62-708b-4037-8f52-8d4fe1f37d08)| 放进盘中但翻出来 | False |
+| ![进去一部分](https://github.com/user-attachments/assets/ee3ce256-d9af-4eb1-ac0d-a492342e25a6)| 部分放入盘中 | False |
+
+- Task 2
+
+| 视频演示 | 视频说明 | Success |
+| :------- | :------- | :------- |
+| ![2完美](https://github.com/user-attachments/assets/cfc53b0e-e18a-45cd-a768-6cacb226ea37)| 抓取一次成功 | True |
+| ![2碰到](https://github.com/user-attachments/assets/0d1360af-b4d1-4009-a574-5ef0e6f25369)| 碰到但未抓取成功 | False |
+| ![2差一点完全成功](https://github.com/user-attachments/assets/b55e16b8-c5f1-453b-86fb-b795e14ef25e)| 未完全放入盘中 | False |
 
 
 
