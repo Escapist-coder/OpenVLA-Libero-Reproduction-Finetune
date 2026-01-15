@@ -18,7 +18,7 @@
 | :------- | :------- | :------- |
 | ![2完美](https://github.com/user-attachments/assets/cfc53b0e-e18a-45cd-a768-6cacb226ea37)| 抓取一次成功 | True |
 | ![2碰到](https://github.com/user-attachments/assets/0d1360af-b4d1-4009-a574-5ef0e6f25369)| 碰到但未抓取成功 | False |
-| ![2差一点完全成功](https://github.com/user-attachments/assets/b55e16b8-c5f1-453b-86fb-b795e14ef25e)| 未完全放入盘中 | False |
+| ![2差一点完全成功](https://github.com/user-attachments/assets/edd325f8-5fc9-41fd-aecb-4bb9cefc9b58)| 未完全放入盘中 | False |
 
 
 
